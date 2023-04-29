@@ -15,12 +15,12 @@ function Carrito() {
       </p>
       <ul className="flex flex-col justify-center gap-4">
         {comprasNew.compras.length === 0 ? (
-          <li>
+          <li key={"dskde564"}>
             <p className="font-bold">No existe compras</p>
           </li>
         ) : (
           comprasNew.compras.map((item) => (
-            <li className="flex gap-4">
+            <li className="flex gap-4" key={item.id + "dsd234"}>
               <p className="text-md max-w-[200px]">{item.title}</p>
               <span>+ S/.{item.total_price}</span>
             </li>
