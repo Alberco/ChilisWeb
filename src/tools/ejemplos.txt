@@ -1,0 +1,41 @@
+        <article>
+          {menu.drinks.length <= 0 ? (
+            <p>No hay bebidas</p>
+          ) : (
+            menu.drinks.map((item, index) => (
+              <p key={item.id + index}>{item.title}</p>
+            ))
+          )}
+        </article>
+
+
+          const anadirBebida = () => {
+    setCountBebidas((old) => old + 1);
+    countBebidas >= 5
+      ? null
+      : updateDrinks(
+          { id: "3d", title: "Coca Cola", count: 1, price: 10 },
+          false
+        );
+  };
+  const eliminarBebida = () => {
+    setCountBebidas((old) => old - 1);
+    countBebidas <= 0
+      ? null
+      : updateDrinks(
+          { id: "3d", title: "Coca Cola", count: 1, price: 10 },
+          true
+        );
+  };
+
+
+          <button
+          onClick={aumentarTotalC}
+          className="border-2 px-2 py-1 space-x-1"
+        >
+          cambiar + count
+        </button>
+        <p>{countBebidas}</p>
+        <button onClick={decrementarTotalC} className="border-2 px-2 py-1">
+          cambiar - count
+        </button>
